@@ -4,3 +4,6 @@ psycopg2-binary==2.9.9 # PostgreSQL adapter for Django
 whitenoise==6.6.0      # For serving static files in production
 python-dotenv==1.0.0   # For managing environment variables
 dj-database-url==2.1.0 # django DATABASE_URL
+Pillow==10.1.0  # for handling images
+django-crispy-forms==2.1
+django-allauth==0.58.2
