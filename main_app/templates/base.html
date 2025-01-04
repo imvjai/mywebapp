@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}  <!-- Add this line -->
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  <!-- This should now work -->
-    <title>{% block title %}Professional Website{% endblock %}</title>
+    <title>{% block title %}Vijay Chaurasia - Professional Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Vijay Chaurasia</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
-            <a href="/projects/">Projects</a>
-            <a href="/blogs/">Blogs</a>
-            <a href="/contact/">Contact</a>
+            <div class="nav-container">
+                <a href="/" class="logo">Vijay Chaurasia</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/blogs/">Blogs</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -23,7 +28,13 @@
         {% endblock %}
     </main>
     <footer>
-        <p>© 2025 Vijay Chaurasia</p>
+        <div class="footer-container">
+            <p>&copy; 2025 Vijay Chaurasia. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="/terms-of-service/">Terms of Service</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
