@@ -1,0 +1,6 @@
+Django==4.2.7          # Stable version of Django
+gunicorn==21.2.0       # WSGI server for production
+psycopg2-binary==2.9.9 # PostgreSQL adapter for Django
+whitenoise==6.6.0      # For serving static files in production
+python-dotenv==1.0.0   # For managing environment variables
+dj-database-url==2.1.0 # django DATABASE_URL

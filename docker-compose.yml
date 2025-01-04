@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/mywebapp_db
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mywebapp_db
+    volumes:
+      - postgres_data:/var/run/postgresql
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

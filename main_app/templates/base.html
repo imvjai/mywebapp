@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}Professional Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Vijay Chaurasia</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/projects/">Projects</a>
+            <a href="/blogs/">Blogs</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 Vijay Chaurasia</p>
+    </footer>
+</body>
+</html>
